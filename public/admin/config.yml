@@ -23,7 +23,7 @@ collections:
       - { label: "Blog Category", name: "blogCategory", widget: "select", options: ["Publication Updates", "News", "Lab Articles", "Others"], default: ["Lab Articles"], hint: "Select a category for the blog post" }
       - { label: "Author", name: "pubBy", widget: "string" }
       - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Tags", name: "blogTags", widget: "select", multiple: true, allow_add: true, ["icdcece-2022", "conference-paper", "wireless-communication-technology", "cyber-physical-systems", "feature-selection", "machine-learning" ] hint: "Select relevant tags from the list or add your own tag. Make sure that tags should not have capital case and space, it can be '-'(hyphen) separated." }
+      - { label: "Tags", name: "blogTags", widget: "select", multiple: true, allow_add: true, ["icdcece-2022", "conference-paper", "wireless-communication-technology", "cyber-physical-systems", "feature-selection", "machine-learning" ], hint: "Select relevant tags from the list or add your own tag. Make sure that tags should not have capital case and space, it can be '-'(hyphen) separated." }
       - { label: "Read Time", name: "readTime", widget: "string", hint: "Estimated reading time, e.g., '5 min'" }
 
       # - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
