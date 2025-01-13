@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+# This line should *not* be indented
+media_folder: "images/" # Media files will be stored in the repo under images/uploads
+media_folder: "images/" 
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      # - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      # - { label: "Publish Date", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Blog Category", name: "blogCategory", widget: "select", options: ["Publication Updates", "News", "Lab Articles", "Others"], default: ["Lab Articles"], hint: "Select a category for the blog post" }
+      - { label: "Author", name: "pubBy", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Tags", name: "blogTags", widget: "select", multiple: true, options: ["icdcece-2022", "conference-paper", "wireless-communication-technology", "cyber-physical-systems", "feature-selection", "machine-learning" ], allow_add: true, hint: "Select relevant tags from the list or add your own tag. Make sure that tags should not have capital case and space, it can be '-'(hyphen) separated." }
+      - { label: "Read Time", name: "readTime", widget: "string", hint: "Estimated reading time, e.g., '5 min'" }
+      
+      # - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Main content of the blog post" }
+
+
+      # - { label: "Featured Image", name: "heroImage", widget: "image" , hint: "Main image for the blog post" }
+      # - { label: "Blog Card Image", name: "blogCardImage", widget: "object", fields: [
+      #     { label: "Image Source", name: "src", widget: "image", hint: "The image to display on the blog card" },
+      #     { label: "Alt Text", name: "alt", widget: "string", hint: "Image description for accessibility" }
+      #   ]}
+      
+      # - { label: "Tags", name: "blogTags", widget: "tagsSelect", multiple: true, hint: "Select relevant tags from the list or add your own tag." }
+

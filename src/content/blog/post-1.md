@@ -7,6 +7,7 @@ image: "/images/image-placeholder.png"
 categories: ["Application", "Data"]
 author: "John Doe"
 tags: ["nextjs", "tailwind"]
+readTime: 2 min
 draft: false
 ---
 
