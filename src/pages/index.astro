@@ -7,6 +7,7 @@ import Testimonial from "@/partials/Testimonial.astro";
 import type { Button, Feature } from "@/types";
 import { getEntry } from "astro:content";
 import { FaCheck } from "react-icons/fa";
+import Domains from "../componentss/HomePage/Domains.jsx";
 
 interface Homepage {
   banner: {
@@ -82,6 +83,23 @@ const { banner, features }: Homepage = homepage.data;
     </div>
   </section>
   <!-- /Banner -->
+
+  <!-- Research Domains -->
+
+  <section class="scale-90">
+    <div class="bg-white w-full flex flex-col justify-center min-h-[20rem]">
+      <div class="flex flex-col gap-14 my-10 items-center mx-auto">
+        <hr>
+        <!-- <HeadingStyle3 Text="Research Areas" Case="uppercase" ColorHex="" /> -->
+
+        <Domains client:load />
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- /Research Domains -->
 
   <!-- Features -->
   {
