@@ -3,8 +3,8 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 # This line should *not* be indented
-media_folder: "src/assets/images" # Media files will be stored in the repo under images/uploads
-media_folder: "src/assets/images" 
+media_folder: "/images/" # Media files will be stored in the repo under images/uploads
+media_folder: "/images/" 
 
 publish_mode: editorial_workflow
 
