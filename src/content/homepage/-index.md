@@ -1,8 +1,9 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Astro Project"
-  content: "Astroplate is a free starter template built with Astro and TailwindCSS, providing everything you need to jumpstart your Astro project and save valuable time."
+  title: "Cyber Physical Systems
+Laboratory"
+  content: "The CyPSi Lab, founded in 1999 at the University of Delhi's Institute of Informatics and Communication (IIC), excels in Educational Technologies, scientific research, and Cyber-Physical Systems (CPS). It offers opportunities for cutting-edge R&D, global collaboration, and practical applications, driving entrepreneurship and delivering impactful solutions"
   image: "/images/banner.png"
   button:
     enable: true
