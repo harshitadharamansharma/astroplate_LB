@@ -4,7 +4,6 @@ backend:
 
 # This line should *not* be indented
 media_folder: "/images/" # Media files will be stored in the repo under images/uploads
-media_folder: "/images/" 
 
 publish_mode: editorial_workflow
 
