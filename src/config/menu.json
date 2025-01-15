@@ -5,29 +5,25 @@
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Research Focus",
+      "url": "/research"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Publications",
+      "url": "/publications"
     },
     {
-      "name": "Pages",
+      "name": "People",
+      "url": "/authors"
+    },
+    {
+      "name": "Blogs",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Contact",
-          "url": "/contact"
-        },
-        {
           "name": "Blog",
           "url": "/blog"
-        },
-        {
-          "name": "Authors",
-          "url": "/authors"
         },
         {
           "name": "Categories",
@@ -36,13 +32,18 @@
         {
           "name": "Tags",
           "url": "/tags"
-        },
-        {
-          "name": "404 Page",
-          "url": "/404"
         }
       ]
+    },   
+    {
+      "name": "Contact",
+      "url": "/contact"
+    },
+    {
+      "name": "Join",
+      "url": "/join"
     }
+
   ],
   "footer": [
     {

@@ -6,7 +6,7 @@ Laboratory"
   content: "The CyPSi Lab, founded in 1999 at the University of Delhi's Institute of Informatics and Communication (IIC), excels in Educational Technologies, scientific research, and Cyber-Physical Systems (CPS). It offers opportunities for cutting-edge R&D, global collaboration, and practical applications, driving entrepreneurship and delivering impactful solutions"
   image: "/images/banner.png"
   button:
-    enable: true
+    enable: false
     label: "Get Started For Free"
     link: "https://github.com/zeon-studio/astroplate"
 
@@ -35,7 +35,7 @@ features:
       - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
       - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
     button:
-      enable: true
+      enable: false
       label: "Get Started Now"
       link: "https://github.com/zeon-studio/astroplate"
 
