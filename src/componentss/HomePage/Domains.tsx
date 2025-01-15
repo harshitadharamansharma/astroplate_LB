@@ -72,7 +72,7 @@ const Domains = () => {
   const [selectedCard, setSelectedCard] = useState(cardsData[0].title);
 
   // Function to handle card clicks
-  const updateContent = (title) => {
+  const updateContent = (title: string) => {
     setSelectedTitle(title);
     setSelectedCard(title); // Set the clicked card as active
     const selectedCardData = cardsData.find(card => card.title === title);

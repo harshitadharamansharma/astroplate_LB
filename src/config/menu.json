@@ -36,12 +36,12 @@
       ]
     },   
     {
-      "name": "Contact",
-      "url": "/contact"
-    },
-    {
       "name": "Join",
       "url": "/join"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
     }
 
   ],

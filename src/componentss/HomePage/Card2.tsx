@@ -1,14 +1,22 @@
 import React from 'react';
 
-const Card = ({ title, image, onClick, isActive }) => {
+// Define the props interface
+interface CardProps {
+  title: string; // Card title
+  image: string; // Image URL or path
+  onClick?: () => void; // Optional click handler
+  isActive: boolean; // Indicates if the card is active
+}
+
+const Card: React.FC<CardProps> = ({ title, image, onClick, isActive }) => {
   const handleClick = () => {
     if (onClick) onClick(); // Trigger the onClick callback passed from the parent
   };
-// bg-clip-border border-solid-500  border-8  group-hover:border-8
+
   return (
     <div
       onClick={handleClick}
-      className={`relative group h-48 flex flex-col rounded-xl  text-gray-700 
+      className={`relative group h-48 flex flex-col rounded-xl text-gray-700 
         ${isActive ? 'shadow-[var(--accent-focus)] ring-4 ring-[var(--accent-2)]' : 'shadow-md'} 
         hover:shadow-lg hover:shadow-[var(--accent-focus)] cursor-pointer`}
     >
@@ -16,10 +24,10 @@ const Card = ({ title, image, onClick, isActive }) => {
         <div className="h-28">
           <div
             className={`absolute scale-75 bg-[var(--accent-2)] 
-              ${isActive ? ' scale-90' : ''} 
+              ${isActive ? 'scale-90' : ''} 
               border-[var(--accent-2)]  
-              group-hover:scale-90  top-[-30%] left-[17%]
-              z-40  duration-300 h-48 w-48 rounded-[50%]`}
+              group-hover:scale-90 top-[-30%] left-[17%]
+              z-40 duration-300 h-48 w-48 rounded-[50%]`}
           >
             <img
               src={image}
