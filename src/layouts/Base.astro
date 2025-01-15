@@ -8,7 +8,7 @@ import Header from "@/partials/Header.astro";
 import "@/styles/main.scss";
 import { AstroFont } from "astro-font";
 import { ViewTransitions } from "astro:transitions";
-import SearchModal from "./helpers/SearchModal";
+// import SearchModal from "./helpers/SearchModals";
 
 // font families
 const pf = theme.fonts.font_family.primary;
@@ -174,7 +174,7 @@ const { title, meta_title, description, image, noindex, canonical } =
   <body>
     <TwSizeIndicator />
     <Header />
-    <SearchModal client:load />
+    <!-- <SearchModal client:load /> -->
     <main id="main-content">
       <slot />
     </main>

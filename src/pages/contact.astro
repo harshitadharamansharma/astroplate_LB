@@ -7,6 +7,9 @@ import { getEntry } from "astro:content";
 const contact = await getEntry("contact", "-index");
 const { contact_form_action }: { contact_form_action: string } = config.params;
 const { title, description, meta_title, image } = contact.data;
+
+import ContactUs from "../componentss/Contact/ContactUs.astro";
+
 ---
 
 <Base
@@ -18,6 +21,7 @@ const { title, description, meta_title, image } = contact.data;
   <PageHeader title={title} />
   <section class="section-sm">
     <div class="container">
+
       <div class="row">
         <div class="mx-auto md:col-10 lg:col-6">
           <form action={contact_form_action} method="POST">
@@ -60,6 +64,12 @@ const { title, description, meta_title, image } = contact.data;
           </form>
         </div>
       </div>
+
+      <div class="scale-75">
+        <ContactUs />
+      </div>
+
+      
     </div>
   </section>
 </Base>

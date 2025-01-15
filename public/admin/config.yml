@@ -38,3 +38,16 @@ collections:
       
       # - { label: "Tags", name: "blogTags", widget: "tagsSelect", multiple: true, hint: "Select relevant tags from the list or add your own tag." }
 
+  - name: "newslist"
+    label: "News List"
+    folder: "src/content/newslist"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string", required: false }
+      - { name: "meta_title", label: "Meta Title", widget: "string", required: false }
+      - { name: "description", label: "Description", widget: "text", required: false }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "text", label: "Text", widget: "text" }
+      - { name: "href", label: "Link", widget: "string", pattern: ["https?://.*", "Must be a valid URL"] }
+      - { name: "draft", label: "Draft", widget: "boolean", default: false }

@@ -78,6 +78,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
+    require('tailwind-scrollbar'),
     require("@tailwindcss/forms"),
     require("tailwind-bootstrap-grid")({
       generateContainer: false,

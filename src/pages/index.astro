@@ -7,7 +7,18 @@ import Testimonial from "@/partials/Testimonial.astro";
 import type { Button, Feature } from "@/types";
 import { getEntry } from "astro:content";
 import { FaCheck } from "react-icons/fa";
-import Domains from "../componentss/HomePage/Domains.jsx";
+import Domains from "../componentss/HomePage/Domains.tsx";
+
+import HeadingStyle1 from "../componentss/Headings/HeadingStyle1.astro";
+import HeadingStyle2 from "../componentss/Headings/HeadingStyle2.astro";
+import HeadingStyle3 from "../componentss/Headings/HeadingStyle3.astro";
+
+import BlogCardFeatured from "../componentss/HomePage/BlogCardFeatured.astro";
+import News from "../componentss/HomePage/News.astro";
+import CardType2 from "@/componentss/HomePage/CardType2.astro";
+import MotoCard from "@/componentss/HomePage/MotoCard.astro";
+
+
 
 interface Homepage {
   banner: {
@@ -23,6 +34,13 @@ const homepage = await getEntry("homepage", "-index");
 const testimonial = await getEntry("sections", "testimonial");
 const call_to_action = await getEntry("sections", "call-to-action");
 const { banner, features }: Homepage = homepage.data;
+
+const CardList2 = [
+  { itemText: 'PhD Programme', itemHref: 'https://www.du.ac.in/', bgImgUrl: './collab-images/phd-programme.jpg' }, 
+  { itemText: 'Research Internship', itemHref: 'https://cps.iic.ac.in/joinus', bgImgUrl: './collab-images/internship.jpg' }, 
+  { itemText: 'Incubation', itemHref: 'https://www.iic.ac.in/', bgImgUrl: './collab-images/project-fellowships.jpg' }, 
+
+];
 ---
 
 <Base>
@@ -31,11 +49,11 @@ const { banner, features }: Homepage = homepage.data;
     <div class="container">
       <div class="row justify-center">
         <div class="lg:col-7 md:col-9 mb-8 text-center">
-          <h1
+          <!-- <h1
             set:html={markdownify(banner.title)}
             class="mb-4 text-h3 lg:text-h1"
-          />
-          <p set:html={markdownify(banner.content)} class="mb-8" />
+          /> -->
+          <!-- <p set:html={markdownify(banner.content)} class="mb-8" /> -->
 
           <div class="hidden md:block animated-text bg-white rounded-r-lg px-6 py-4">
             <div class="text-sm font-semibold">CyPSi Lab <span></span></div>
@@ -64,9 +82,9 @@ const { banner, features }: Homepage = homepage.data;
             )
           } -->
 
-
+ <!-- 
         </div>
-        <!-- {
+       {
           banner.image && (
             <div class="col-12">
               <ImageMod
@@ -78,8 +96,9 @@ const { banner, features }: Homepage = homepage.data;
               />
             </div>
           )
-        } -->
+     
       </div>
+         } -->
     </div>
   </section>
   <!-- /Banner -->
@@ -88,13 +107,55 @@ const { banner, features }: Homepage = homepage.data;
 
   <section class="scale-90">
     <div class="bg-white w-full flex flex-col justify-center min-h-[20rem]">
-      <div class="flex flex-col gap-14 my-10 items-center mx-auto">
+      <div class="flex flex-col items-center mx-auto">
         <hr>
         <!-- <HeadingStyle3 Text="Research Areas" Case="uppercase" ColorHex="" /> -->
+        <!-- <div class=`text-center text-2xl mt-[30px] mx-auto ${ Case } leading-3 font-poppins font-bold text-white text-4xl ${ styles }`>
+          <h3 class=`text-[${ ColorHex }]`>{ Text }</h3>
+        </div> -->
+        <div class=`text-center mb-12 text-2xl  mx-auto uppercase leading-3 font-poppins font-bold text-white text-4xl`>
+          <h3 class=`text-[var(--accent)]`>Research Areas</h3>
+        </div>
+        <div class="max-w-90 mb-12">
+          <Domains client:load />
+        </div>
+      
+        <hr>
 
-        <Domains client:load />
+        <section>
+					<!-- <HeadingStyle2 Text="Spotlight" Case="uppercase" ColorHex="var(--accent)" /> -->
+          <div class=`text-center mb-4 text-3xl  mx-auto uppercase leading-3 font-poppins font-bold text-white text-4xl`>
+            <h3 class=`text-[var(--accent)]`>Spotlight</h3>
+          </div>
 
-        <h1>hi</h1>
+          <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
+						
+            <div class="sm:col-span-6 lg:col-span-6">
+              <p class="mx-2 text-slate-800 font-semibold text-2xl">News & Updates</p>
+              <hr class="my-2 ">
+              <News />
+            </div>
+            
+            <!-- <div class="grid grid-cols-1 sm:grid-cols-12 gap-8">
+					
+							<div class="sm:col-span-6 lg:col-span-6">
+
+								<p class="mx-2 text-slate-800 font-semibold text-2xl">Featured Blog</p>
+								<hr class="my-2 ">
+								<BlogCardFeatured />
+							</div>
+					
+							<div class="sm:col-span-6 lg:col-span-6">
+								<p class="mx-2 text-slate-800 font-semibold text-2xl">News & Updates</p>
+								<hr class="my-2 ">
+								<News />
+							</div>
+						</div> -->
+
+
+					</div>
+				</section>
+
       </div>
     </div>
   </section>
@@ -140,14 +201,57 @@ const { banner, features }: Homepage = homepage.data;
       </section>
     ))
   }
+
+
   <!-- /Features -->
 
   <Testimonial testimonial={testimonial} />
   <CallToAction call_to_action={call_to_action} />
+
+				
+  <hr>
+
+  
+  <section class="bg-slate-100">
+    <div class = "bg-white w-full flex flex-col h-[30rem]  items-center justify-center">
+      <div class = "flex flex-col gap-8">
+        <!-- <HeadingStyle1 Text="Collaborate with us" Case="uppercase" ColorHex="var(--accent)" LineColorHex="#0A0A0A"/> -->
+        <div class=`text-center mb-4 text-3xl  mx-auto uppercase leading-3 font-poppins font-bold text-white text-4xl`>
+          <h3 class=`text-[var(--accent)]`>Collaborate with us</h3>
+        </div>
+        <CardType2 itemList={ CardList2 } />
+      
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <MotoCard class=""/>
+  </section>
+
+  
+
 </Base>
 
 <style>
-  animated-text {
+
+:root {
+	--accent: #4392F1;
+	--accent-2: #2580ef;
+	--accent-hover: #0e5bb9 ;
+	--accent-focus: #a5caf8 ;
+	--accent-3:rgba(13,28,57,0.86);
+	--accent-3-hover:rgba(47, 84, 156, 0.85);
+	--black: 15, 18, 25;
+	--gray: 96, 115, 159;
+	--gray-light: #efefef;
+	--gray-dark: #303030;
+	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+		0 16px 32px rgba(var(--gray), 33%);
+}
+  
+animated-text {
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
@@ -158,7 +262,7 @@ const { banner, features }: Homepage = homepage.data;
   }
 
   .animated-text span::before {
-    content: "Youtuber";
+    content: "";
     color: var(--accent);
     animation: words 40s infinite;
   }

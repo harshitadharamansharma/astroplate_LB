@@ -1,0 +1,50 @@
+---
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+---
+
+<div class="wrapper bg-gray-200 bg-cover bg-center bg-fixed transition-all duration-200 ease-in-out flex flex-col justify-center p-12">
+  <div class="location-boxes flex flex-row flex-nowrap justify-center h-[550px]">
+    <div class="map-box border-2 border-black h-full w-[500px] m-2 z-10">
+      <!-- This div will be where the map renders -->
+      <div id="map" class="map h-full w-full overflow-hidden"></div>
+    </div>
+    
+
+  </div>
+  <div class="text mt-12 mb-12 text-center text-accent-2">
+    <!-- <p class="primary text-7xl font-semibold mb-4">Contact Us</p> -->   
+    <p class="secondary text-4xl font-semibold mb-4">Location</p> 
+
+    <p class="secondary text-2xl">Institute of Informatics & Communication</p>
+    <p class="secondary text-2xl">University of Delhi South Campus</p>
+    <p class="secondary text-2xl">Delhi – 110021</p>
+  
+  </div>
+
+  <div class="text mt-12 mb-12 text-center text-accent-2">
+    <!-- <p class="primary text-7xl font-semibold mb-4">Contact Us</p> -->   
+    <p class="secondary text-4xl font-semibold mb-4">Email</p> 
+
+    <p class="secondary text-2xl"><a href="mailto:cps@south.du.ac.in">cps@south.du.ac.in</a></p>
+
+  
+  </div>
+  
+</div>
+
+<!-- Client-side script to initialize Leaflet -->
+<script>
+  import L from 'leaflet';
+
+  // Leaflet map initialization
+  const map = L.map('map').setView([28.584791140538854, 77.16380898471955], 14);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  L.marker([28.584791140538854, 77.16380898471955]).addTo(map)
+    .bindPopup('Right Here!')
+    .openPopup();
+</script>

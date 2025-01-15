@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+import { formatDate } from './js/utils';
+
+const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Find the latest blog with the "featured" tag
+const featuredArticle = allBlogArticles.find((article) => article.data.blogTags.includes('featured'));
+---
+
+{featuredArticle ? (
+    <div class="featured-article relative mx-auto bg-white bg-opacity-20 bg-cover bg-center md:max-w-screen-lg">
+        <div class="h-[480px] bg-cover text-center overflow-hidden"
+        style=`background-image: url(${featuredArticle.data.blogCardImage?.src || featuredArticle.data.heroImage})`>
+        {/* <img class="absolute  w-full object-cover" src= {featuredArticle.data.blogCardImage?.src || featuredArticle.data.heroImage} /> */}
+        <div class="text-white lg:w-1/2">
+             {/* hover:transition-transform */}
+            <div class=" h-full bg-opacity-95 bg-slate-500 p-5 opacity-95 backdrop-blur-lg lg:p-12">
+                {/* <p class="mb-4 font-serif font-light">{new Date(featuredArticle.data.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p> */}
+                <p class="mb-4 font-serif font-light  text-left">{formatDate(featuredArticle.data.pubDate)}</p>
+                <h2 class="font-serif text-lg font-bold text-left">{featuredArticle.data.title}</h2>
+                <p class="font-serif my-4 text-sm italic font-semibold  text-left">-By {featuredArticle.data.pubBy}</p>
+                
+                <p class="font-serif my-4 text-sm text-left text-ellipsis">{featuredArticle.data.description}</p>
+                
+                <a href={`/blogs/${featuredArticle.slug}`} class="mt-6 inline-block rounded-sm border-2 px-10 py-3 font-semibold border-white hover:bg-white hover:text-[var(--accent)]"> Read Now </a>
+            </div>
+            </div>
+        </div>
+    </div>
+) : (
+    <p>No featured articles found.</p>
+)}

@@ -15,6 +15,20 @@ const blogCollection = defineCollection({
   }),
 });
 
+const newslistCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    meta_title: z.string().optional(),
+    description: z.string().optional(),
+    date: z.date().optional(),
+    text: z.string(),
+    href: z.string().url(),
+    draft: z.boolean().optional(),
+  }),
+});
+
+
+
 // Author collection schema
 const authorsCollection = defineCollection({
   schema: z.object({
@@ -54,4 +68,5 @@ export const collections = {
   blog: blogCollection,
   authors: authorsCollection,
   pages: pagesCollection,
+  newslist: newslistCollection,
 };

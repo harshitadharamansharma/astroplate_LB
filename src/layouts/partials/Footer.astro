@@ -7,13 +7,52 @@ import social from "@/config/social.json";
 import { markdownify } from "@/lib/utils/textConverter";
 
 const { footer }: { footer: { name: string; url: string }[] } = menu;
+
+const today = new Date().getFullYear();
+import { SITE_TITLE } from "../../consts";
+import FooterColumns from "@/componentss/FooterColumns.astro";
+
+const urlList1 = [
+  { text: 'University of Delhi', href: 'https://www.du.ac.in/' },
+  { text: 'Ministry of Education', href: 'https://www.education.gov.in/' },  // Font Awesome icon
+  { text: 'Project Samarth', href: 'https://samarth.edu.in/' },  // Font Awesome icon
+  { text: 'National Portal of India', href: 'https://www.india.gov.in/'},  // Image icon
+  { text: 'Internship @ IIC', href: 'https://cps.iic.ac.in/'},  // Image icon
+];
+
+
+const urlList2 = [ 
+  { text: 'CPS Framework – Volume 1', href: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-201.pdf' },
+  { text: 'CPS Framework – Volume 2', href: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-202.pdf' },  // Font Awesome icon
+  { text: 'Resources for AI', href: 'https://storage.googleapis.com/deepmind-media/research/New_AtHomeWithAI%20resources.pdf' },  // Image icon
+];
+
+
+const urlSocials= [
+	{ text: 'LinkedIn', href: 'https://www.linkedin.com/company/cypsilab/', faIcon: 'fa-brands fa-linkedin' },
+	{ text: 'YouTube', href: 'https://www.youtube.com/@cypsilab', faIcon: 'fa-brands fa-youtube' },
+  	{ text: 'GitHub', href: 'https://www.github.com', faIcon: 'fa-brands fa-github' },  // Font Awesome icon
+];
+
+const urlSocials2= [
+  { text: 'YouTube', href: 'https://www.google.com', svgIcon: 'https://example.com/google-icon.svg', iconAltText: 'Google Icon' },
+  { text: 'LinkedIn ', href: 'https://astro.build', imgIcon: 'https://example.com/astro-icon.png', iconAltText: 'Astro Icon' },  // Image icon
+  { text: 'GitHub', href: 'https://www.github.com', faIcon: 'fa-brands fa-github' },  // Font Awesome icon
+];
+
 ---
 
-<footer class="bg-theme-light dark:bg-darkmode-theme-light">
-  <div class="container">
+<footer class="bg-darkmode-theme-light dark:bg-darkmode-theme-light w-full flex items-stretch flex-col justify-center ">
+
+<!--   <footer class="bg-theme-light dark:bg-darkmode-theme-light">
+ 
+<div class="container">
     <div class="row items-center py-10">
       <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:text-left">
         <Logo />
+        <div class="order-0">
+          <a href="#"><img src="./public/images/logo.png" class="m-2" width="90" height=""/></a>
+        </div>
       </div>
       <div class="mb-8 text-center lg:col-6 lg:mb-0">
         <ul>
@@ -30,9 +69,49 @@ const { footer }: { footer: { name: string; url: string }[] } = menu;
         <Social source={social.main} className="social-icons" />
       </div>
     </div>
-  </div>
+  </div> -->
+
+
+		<div class="flex flex-col md:flex-row justify-center 
+		items-stretch md:px-[8%] ">
+
+		<FooterColumns 
+			image = { Logo.src }
+			imageAltText = "CyPSi - Logo - white"
+			description = `<div class="text-sm">Institute of Informatics &amp; Communication<br>
+							University of Delhi
+							South Campus<br>
+							Delhi – 110021<br><br>
+							<a class="text-sm my-4 text-[#ffffff]" href="mailto:cps@south.du.ac.in">cps@south.du.ac.in</a> </div>`, 
+		/>
+
+		<FooterColumns 
+			title="Useful Links"
+			urlList={urlList1}
+			
+
+		/>
+
+
+		<FooterColumns 
+			title="External Resources"
+			urlList={urlList2}
+			
+
+		/>
+
+		<FooterColumns 
+		title="Socials"
+		urlList={urlSocials}
+		
+
+	/>
+    </div>
+
+
   <div class="border-t border-border py-7 dark:border-darkmode-border">
     <div class="container text-center text-light dark:text-darkmode-light">
+      <p>&copy; {today} { SITE_TITLE } - All Rights Reserved.</p>
       <p set:html={markdownify(config.params.copyright)} />
     </div>
   </div>

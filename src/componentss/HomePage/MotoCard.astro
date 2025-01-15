@@ -1,0 +1,39 @@
+---
+
+import think from "../../assets/motto-card/think.png";
+import connect from "../../assets/motto-card/connect.png";
+import share from "../../assets/motto-card/share.png";
+import collab from "../../assets/motto-card/collab.png";
+import { Image } from "astro:assets";
+
+const motoCards = [
+    {   title: 'Think',
+        image: think,
+
+    },{   title: 'Connect',
+        image: connect,
+
+    },{   title: 'Share',
+        image: share,
+
+    },{   title: 'Collaborate',
+        image: collab,
+
+    },
+
+]
+
+---
+<>
+<div class=" bg-[var(--accent)] w-full flex flex-row rounded-sm">
+
+{motoCards.map((card) =>(
+    <div class=" w-3/12 h-full flex flex-col justify-center items-center even:bg-[var(--accent-hover)]">
+      <Image src={card.image} alt={card.title}  class="h-full pt-6 pb-2" />
+      <p class="text-white text-md font-bold pb-4">{card.title}</p>
+    </div>
+))}
+
+</div>
+</>
+
