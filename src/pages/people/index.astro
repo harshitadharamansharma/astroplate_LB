@@ -1,9 +1,10 @@
 ---
-import PeopleCard from "@/components/AuthorCard.astro";
+import PeopleCard from "@/components/PeopleCard.astro";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 import { getEntry } from "astro:content";
+
 
 const COLLECTION_FOLDER = "people";
 
@@ -69,7 +70,7 @@ const employee = people.filter(people => people.data.category === "Employee")
 
 
       <div class="row justify-center">
-        <h1 class="text-blue-500">Supporting Team</h1>
+        <h1 class="text-blue-500">Supporting Members</h1>
         <hr class="p-4">
 
         {

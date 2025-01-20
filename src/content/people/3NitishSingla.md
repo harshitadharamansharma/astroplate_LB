@@ -1,7 +1,7 @@
 ---
 title: 'Nitish Singla'
 email: johndoe@email.com
-image: '/people-img/Nitish-Singla.png'
+image: '/images/people-img/Nitish-Singla.png'
 
 designation: 'Research Intern'
 qualification: 'B.Tech., University of Delhi'
@@ -24,23 +24,23 @@ social:
     link: https://linkedin.com
 
   - name: Medium
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: OrcID
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: Scopus
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: ResearchGate
-    icon: FaLinkedin
+    icon: FaMedium
     link: https://linkedin.com
 
   - name: GoogleScholar
-    icon: FaLinkedin
+    icon: FaGoogleScholar
     link: https://linkedin.com
+
+  # - name: OrcID
+  #   icon: FaOrcID
+  #   link: https://linkedin.com
+
+  # - name: Scopus
+  #   icon: FaScopus
+  #   link: https://linkedin.com
+
+  # - name: ResearchGate
+  #   icon: FaResearchGate
+  #   link: https://linkedin.com
 
 ---

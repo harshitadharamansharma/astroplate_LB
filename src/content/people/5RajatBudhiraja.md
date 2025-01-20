@@ -1,9 +1,9 @@
 ---
-title: 'Rajat Budhiraja'
+title: 'Rajat Budhiraj'
 email: johndoe@email.com
-image: '/people-img/sunil-kumar.jpg'
+image: '/images/people-img/RajatB.png'
 
-designation: ''
+designation: 'Previous Research Scholar'
 qualification: 'Ph.D. University of Delhi'
 description: 'This is the description of the person'
 category: 'Associated Faculty'

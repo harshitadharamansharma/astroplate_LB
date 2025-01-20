@@ -1,7 +1,7 @@
 ---
 title: 'Pratik Karmakar'
 email: johndoe@email.com
-image: '/people-img/pratik-karmakar-400x442.jpg'
+image: '/images/people-img/pratik-karmakar-400x442.jpg'
 designation: 'Research Scholar'
 qualification: 'M.Sc., University Utara Malaysia'
 description: 'This is the Description of the person.'
@@ -21,23 +21,22 @@ social:
     link: https://linkedin.com
 
   - name: Medium
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: OrcID
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: Scopus
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: ResearchGate
-    icon: FaLinkedin
+    icon: FaMedium
     link: https://linkedin.com
 
   - name: GoogleScholar
-    icon: FaLinkedin
+    icon: FaGoogleScholar
     link: https://linkedin.com
 
+  # - name: OrcID
+  #   icon: FaOrcID
+  #   link: https://linkedin.com
+
+  # - name: Scopus
+  #   icon: FaScopus
+  #   link: https://linkedin.com
+
+  # - name: ResearchGate
+  #   icon: FaResearchGate
+  #   link: https://linkedin.com
 ---

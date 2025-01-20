@@ -4,11 +4,11 @@ import ImageMod from "./ImageMod.astro";
 import Social from "./Social.astro";
 
 const { data } = Astro.props;
-const { title, image, social } = data.data;
+const { title, image, social, designation, qualification } = data.data;
 ---
 
 <div
-  class="rounded bg-theme-light p-8 text-center dark:bg-darkmode-theme-light"
+  class="rounded bg-theme-light p-4 text-center dark:bg-darkmode-theme-light"
 >
   {
     image && (
@@ -23,10 +23,13 @@ const { title, image, social } = data.data;
     )
   }
   <h4 class="mb-3">
-    <a href={`/authors/${data.slug}`}>{title}</a>
+    {title}
+    <!-- <a href={`/authors/${data.slug}`}>{title}</a> -->
   </h4>
+  <p class="mb font-bold text-base">{designation}</p>
+  <p class="mb-4 ">{qualification}</p>
   <p class="mb-4">
-    {plainify(data.body?.slice(0, 100))}
+    {plainify(data.body?.slice(0, 250))}
   </p>
-  <Social source={social} className="" />
+  <Social source={social} className="social-icons-2" />
 </div>

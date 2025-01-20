@@ -1,7 +1,7 @@
 ---
 title: 'Anil S. Bafila'
 email: johndoe@email.com
-image: '/people-img/anil-bafila-400x400.jpg'
+image: '/images/people-img/anil-bafila-400x400.jpg'
 
 designation: 'Research Scholar'
 qualification: 'Ph.D. University of Delhi'
@@ -23,23 +23,25 @@ social:
     link: https://linkedin.com
 
   - name: Medium
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: OrcID
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: Scopus
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: ResearchGate
-    icon: FaLinkedin
+    icon: FaMedium
     link: https://linkedin.com
 
   - name: GoogleScholar
-    icon: FaLinkedin
+    icon: FaGoogleScholar
     link: https://linkedin.com
+
+  # - name: OrcID
+  #   icon: FaOrcID
+  #   link: https://linkedin.com
+
+  # - name: Scopus
+  #   icon: FaScopus
+  #   link: https://linkedin.com
+
+  # - name: ResearchGate
+  #   icon: FaResearchGate
+  #   link: https://linkedin.com
+
+
 
 ---

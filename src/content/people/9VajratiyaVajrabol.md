@@ -1,7 +1,7 @@
 ---
 title: 'Vajratiya Vajrabol'
 email: johndoe@email.com
-image: '/people-img/Vajratiya-Vajrabol'
+image: '/images/people-img/Vajratiya-Vajrabol.jpg'
 designation: 'Research Scholar'
 qualification: 'M.Sc., Murdoch University'
 description: 'This is the Description of the person.'
@@ -21,23 +21,23 @@ social:
     link: https://linkedin.com
 
   - name: Medium
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: OrcID
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: Scopus
-    icon: FaLinkedin
-    link: https://linkedin.com
-
-  - name: ResearchGate
-    icon: FaLinkedin
+    icon: FaMedium
     link: https://linkedin.com
 
   - name: GoogleScholar
-    icon: FaLinkedin
+    icon: FaGoogleScholar
     link: https://linkedin.com
+
+  # - name: OrcID
+  #   icon: FaOrcID
+  #   link: https://linkedin.com
+
+  # - name: Scopus
+  #   icon: FaScopus
+  #   link: https://linkedin.com
+
+  # - name: ResearchGate
+  #   icon: FaResearchGate
+  #   link: https://linkedin.com
 
 ---
