@@ -2,6 +2,13 @@
 const { source, className } = Astro.props;
 import DynamicIcon from "@/helpers/DynamicIcon";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faLinkedin, faResearchgate, faGoogleScholar, faMedium, faTwitter } from "@fortawesome/free-brands-svg-icons";
+// import { faOrcid } from "@fortawesome/free-solid-svg-icons";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
+
+library.add(faLinkedin, faResearchgate, faGoogleScholar, faMedium, faTwitter);
+
 export interface ISocial {
   name: string;
   icon: string;

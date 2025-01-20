@@ -9,6 +9,7 @@ const COLLECTION_FOLDER = "authors";
 
 const authorIndex = await getEntry(COLLECTION_FOLDER, "-index");
 const authors = await getSinglePage(COLLECTION_FOLDER);
+
 ---
 
 <Base title={authorIndex.data.title}>
@@ -19,6 +20,7 @@ const authors = await getSinglePage(COLLECTION_FOLDER);
         {
           authors.map((author) => (
             <div class="mb-14 md:col-6 lg:col-4">
+
               <AuthorCard data={author} />
             </div>
           ))
@@ -27,3 +29,5 @@ const authors = await getSinglePage(COLLECTION_FOLDER);
     </div>
   </section>
 </Base>
+
+

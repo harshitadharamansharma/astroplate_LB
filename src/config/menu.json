@@ -14,7 +14,7 @@
     },
     {
       "name": "People",
-      "url": "/authors"
+      "url": "/people"
     },
     {
       "name": "Blogs",
@@ -24,6 +24,10 @@
         {
           "name": "Blog",
           "url": "/blog"
+        },
+        {
+          "name": "Authors",
+          "url": "/authors"
         },
         {
           "name": "Categories",

@@ -1,0 +1,106 @@
+---
+import PeopleCard from "@/components/AuthorCard.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntry } from "astro:content";
+
+const COLLECTION_FOLDER = "people";
+
+const peopleIndex = await getEntry(COLLECTION_FOLDER, "-index");
+const people = await getSinglePage(COLLECTION_FOLDER);
+const faculty = people.filter(people => people.data.category === "Faculty Members")
+const associated = people.filter(people => people.data.category === "Associated Faculty")
+const scholar = people.filter(people => people.data.category === "Research Scholars")
+const intern = people.filter(people => people.data.category === "Research Interns")
+const employee = people.filter(people => people.data.category === "Employee")
+
+
+---
+
+<Base title={peopleIndex.data.title}>
+  <PageHeader title={peopleIndex.data.title} />
+ 
+  <section class="section-sm pb-0">
+    <div class="container">
+     
+      <div class="row justify-center">
+        <h1 class="text-blue-500">Faculty Members</h1>
+        <hr class="p-4">
+        {
+          faculty.map((ppl) => (
+            
+            <div class="mb-14 md:col-6 lg:col-4">
+              <PeopleCard data={ppl} />
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="row justify-center">
+        <h1 class="text-blue-500">Associated Faculty</h1>
+        <hr class="p-4">
+
+        {
+          associated.map((ppl) => (
+            
+            <div class="mb-14 md:col-6 lg:col-4">
+              <PeopleCard data={ppl} />
+            </div>
+          ))
+        }
+      </div>
+
+
+
+      <div class="row justify-center">
+        <h1 class="text-blue-500">Research Scholars</h1>
+        <hr class="p-4">
+
+        {
+          scholar.map((ppl) => (
+            
+            <div class="mb-14 md:col-6 lg:col-4">
+              <PeopleCard data={ppl} />
+            </div>
+          ))
+        }
+      </div>
+
+
+      <div class="row justify-center">
+        <h1 class="text-blue-500">Supporting Team</h1>
+        <hr class="p-4">
+
+        {
+          employee.map((ppl) => (
+            
+            <div class="mb-14 md:col-6 lg:col-4">
+              <PeopleCard data={ppl} />
+            </div>
+          ))
+        }
+      </div>
+
+
+      <div class="row justify-center">
+        <h1 class="text-blue-500">Research Interns</h1>
+        <hr class="p-4">
+
+        {
+          intern.map((ppl) => (
+            
+            <div class="mb-14 md:col-6 lg:col-4">
+              <PeopleCard data={ppl} />
+            </div>
+          ))
+        }
+      </div>
+
+
+</div>
+
+
+
+  </section>
+</Base>

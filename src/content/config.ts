@@ -52,6 +52,35 @@ const authorsCollection = defineCollection({
   }),
 });
 
+// People collection schema
+const peopleCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    meta_title: z.string().optional(),
+    email: z.string().optional(),
+    image: z.string().optional(),
+
+    designation: z.string().optional(),
+    qualification: z.string().optional(),
+    description: z.string().optional(),
+    category: z.string(),
+    section: z.string().optional(),
+
+    social: z
+      .array(
+        z
+          .object({
+            name: z.string().optional(),
+            icon: z.string().optional(),
+            link: z.string().optional(),
+          })
+          .optional(),
+      )
+      .optional(),
+    draft: z.boolean().optional(),
+  })
+});
+
 // Pages collection schema
 const pagesCollection = defineCollection({
   schema: z.object({
@@ -69,4 +98,5 @@ export const collections = {
   authors: authorsCollection,
   pages: pagesCollection,
   newslist: newslistCollection,
+  people: peopleCollection,
 };
