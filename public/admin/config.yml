@@ -182,3 +182,4 @@ collections:
       - { name: "Description", label: "Description", widget: "text", required: false }
       - { name: "Image", label: "Image", widget: "image", required: false }
       - { name: "Draft", label: "Draft", widget: "boolean", required: false }
+      
