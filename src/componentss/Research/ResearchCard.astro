@@ -1,0 +1,71 @@
+---
+// import type { Props } from "astro";
+const { img, icon, title } = Astro.props;
+// const { img, iconImg, title } = Astro.props;
+---
+
+<div class="flex-item">
+    <img src={img} class="research-card-bg" alt="Image 1" />
+    <div class="overtext">
+      <img src={icon} class="card-icon"></img>
+      <h3 class="text-white">{title}</h3>
+    </div>
+  </div>
+
+
+<style>
+.flex-item {
+  border: 5px solid var(--accent);
+  position: relative;
+  border-radius: 3px;
+  /* margin-bottom: 50px; */
+  height: 196px;
+  width: 600px;
+  text-align: center;
+  background-color: var(--accent);
+}
+
+.research-card-bg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.62;
+  display: block;
+  object-fit: cover;
+}
+
+.clr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--accent);
+}
+.card-icon {
+  filter: invert(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.overtext {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 30rem;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-family: "Poppins";
+}
+.overtext > h3 {
+  padding-top: 1rem;
+  font-size: 22px;
+  font-weight: 700;
+}
+.overtext > img {
+  height: 32px;
+  width: 32px;
+}
+
+</style>

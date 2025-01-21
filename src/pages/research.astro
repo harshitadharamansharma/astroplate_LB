@@ -1,77 +1,85 @@
-<!-- ---
+---
+import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
-import { getSinglePage } from "@/lib/contentParser.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 import { getEntry } from "astro:content";
 
-const COLLECTION_FOLDER = "research";
+const contact = await getEntry("research", "-index");
+// const COLLECTION_FOLDER = "research";
 
-const researchIndex = await getEntry(COLLECTION_FOLDER, "-index");
-const research = await getSinglePage(COLLECTION_FOLDER);
+// const researchIndex = await getEntry(COLLECTION_FOLDER, "-index");
+// const research = await getSinglePage(COLLECTION_FOLDER);
+
+const { title, description, meta_title, image } = contact.data;
+
 
 import type { Props } from "astro";
-import ResearchCards from "../components/Research/ResearchCards.astro";
-const AllResearch = await Astro.glob('../content/domainsc/*.md');
+import ResearchCards from "../componentss/research/ResearchCard.astro";
+// const AllResearch = await Astro.glob('../content/domainsc/*.md');
 
 const card_list = [
   {
     id: 1,
-    img: "./public/rf2.jpg",
-    icon: "./public/heart-pulse-solid.svg",
+    img: "./images/research/rf2.jpg",
+    icon: "./images/research/heart-pulse-solid.svg",
     path: "/healthcare",
     title: "AI in Healthcare",
   },
   {
     id: 2,
-    img: "./public/rf3.jpg",
-    icon: "./public/street-view-solid.svg",
+    img: "./images/research/rf3.jpg",
+    icon: "./images/research/street-view-solid.svg",
     path: "/human-centered-systems",
     title: "Human Centered Systems",
   },
   {
     id: 3,
-    img: "./public/rf4.jpg",
-    icon: "./public/shield-solid.svg",
+    img: "./images/research/rf4.jpg",
+    icon: "./images/research/shield-solid.svg",
     path: "/cybersecurity",
 
     title: "Cybersecurity",
   },
   {
     id: 4,
-    img: "./public/rf5.jpg",
-    icon: "./public/rf6.png",
+    img: "./images/research/rf5.jpg",
+    icon: "./images/research/wearables.png",
     path: "/wearables",
 
     title: "Wearables",
   },
   {
     id: 5,
-    img: "./public/rf5.jpg",
-    icon: "./public/rf6.png",
+    img: "./images/research/rf5.jpg",
+    icon: "./images/research/wearables.png",
     path: "/new-domain-1",
     title: "New Domain",
   },
   {
     id: 6,
-    img: "./public/rf5.jpg",
-    icon: "./public/rf6.png",
+    img: "./images/research/rf5.jpg",
+    icon: "./images/research/wearables.png",
     path: "/new-domain-2",
     title: "New Domain",
   },
 ];
 ---
 
-<Layout
-	title="Research Focus"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date("August 08 2021")}
-	heroImage="/blog-placeholder-about.jpg">  
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <PageHeader title={title} />
 
-	// <TitleHeader title="Apply To CPS Lab" bgImg={ TtlBgImg } />
+  <section class="section-sm pb-0">
+    <div class="container">
+     
 
-	<TitleHeader title="Research Focus" />
+	<!-- <TitleHeader title="Apply To CPS Lab" bgImg={ TtlBgImg } /> -->
 
-	<div >
+
 
   
 		<div class="flex-container">
@@ -84,6 +92,8 @@ const card_list = [
 		  })}
 		</div>
 	  </div>
+
+    </section>
 	
 
 </Layout>
@@ -122,114 +132,4 @@ const card_list = [
 }
 
 </style>
- _____________________________________________
----
-import PeopleCard from "@/components/PeopleCard.astro";
-import Base from "@/layouts/Base.astro";
-import { getSinglePage } from "@/lib/contentParser.astro";
-import PageHeader from "@/partials/PageHeader.astro";
-import { getEntry } from "astro:content";
 
-const COLLECTION_FOLDER = "people";
-
-const peopleIndex = await getEntry(COLLECTION_FOLDER, "-index");
-const people = await getSinglePage(COLLECTION_FOLDER);
-const faculty = people.filter(people => people.data.category === "Faculty Members")
-const associated = people.filter(people => people.data.category === "Associated Faculty")
-const scholar = people.filter(people => people.data.category === "Research Scholars")
-const intern = people.filter(people => people.data.category === "Research Interns")
-const employee = people.filter(people => people.data.category === "Employee")
-
----
-
-<Base title={peopleIndex.data.title}>
-  <PageHeader title={peopleIndex.data.title} />
- 
-  <section class="section-sm pb-0">
-    <div class="container">
-     
-      <div class="row justify-center">
-        <h1 class="text-blue-500">Faculty Members</h1>
-        <hr class="p-4">
-        {
-          faculty.map((ppl) => (
-            
-            <div class="mb-14 md:col-6 lg:col-4">
-              <PeopleCard data={ppl} />
-            </div>
-          ))
-        }
-      </div>
-
-      <div class="row justify-center">
-        <h1 class="text-blue-500">Associated Faculty</h1>
-        <hr class="p-4">
-
-        {
-          associated.map((ppl) => (
-            
-            <div class="mb-14 md:col-6 lg:col-4">
-              <PeopleCard data={ppl} />
-            </div>
-          ))
-        }
-      </div>
-
-
-
-      <div class="row justify-center">
-        <h1 class="text-blue-500">Research Scholars</h1>
-        <hr class="p-4">
-
-        {
-          scholar.map((ppl) => (
-            
-            <div class="mb-14 md:col-6 lg:col-4">
-              <PeopleCard data={ppl} />
-            </div>
-          ))
-        }
-      </div>
-
-
-      // <div class="row justify-center">
-        <h1 class="text-blue-500">Supporting Members</h1>
-        <hr class="p-4">
-
-        {
-          employee.map((ppl) => (
-            
-            <div class="mb-14 md:col-6 lg:col-4">
-              <PeopleCard data={ppl} />
-            </div>
-          ))
-        }
-      </div> //
-
-
-      <div class="row justify-center">
-        <h1 class="text-blue-500">Research Interns</h1>
-        <hr class="p-4">
-
-        {
-          intern.map((ppl) => (
-            
-            <div class="mb-14 md:col-6 lg:col-4">
-              <PeopleCard data={ppl} />
-            </div>
-          ))
-        }
-      </div>
-
-
-</div>
-
-
-
-  </section>
-</Base>
-
-
-
-
--->
