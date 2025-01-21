@@ -5,7 +5,7 @@
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/public/images/logo.png",
+    "logo": "/images/logo.png",
     "logo_darkmode": "/public/images/logo-darkmode.png",
     "logo_width": "150",
     "logo_height": "30",
