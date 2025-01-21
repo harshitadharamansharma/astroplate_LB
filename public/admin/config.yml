@@ -40,23 +40,23 @@ collections:
       - { name: "Link", label: "Link", widget: "string", pattern: ["https?://.*", "Must be a valid URL"] }
       - { name: "Draft", label: "Draft", widget: "boolean", default: false }
 
-  - name: "authors"
-    label: "Authors"
-    folder: "src/content/authors"
-    # create: true
-    # slug: "{{slug}}"
-    fields:
-      - { name: "Title", label: "Title", widget: "string" }
-      - { name: "Meta Title", label: "Meta Title", widget: "string", required: false }
-      - { name: "Email", label: "Email", widget: "string", required: false }
-      - { name: "Image", label: "Image", widget: "image", required: false }
-      - { name: "Description", label: "Description", widget: "text", required: false }
-      - { name: "Social", label: "Social Links", widget: "list", fields: [
-          { name: "name", label: "Name", widget: "string", required: false },
-          { name: "icon", label: "Icon", widget: "string", required: false },
-          { name: "link", label: "Link", widget: "string", required: false }
-        ] }
-      - { name: "Draft", label: "Draft", widget: "boolean", required: false }
+  # - name: "authors"
+  #   label: "Authors"
+  #   folder: "src/content/authors"
+  #   # create: true
+  #   # slug: "{{slug}}"
+  #   fields:
+  #     - { name: "Title", label: "Title", widget: "string" }
+  #     - { name: "Meta Title", label: "Meta Title", widget: "string", required: false }
+  #     - { name: "Email", label: "Email", widget: "string", required: false }
+  #     - { name: "Image", label: "Image", widget: "image", required: false }
+  #     - { name: "Description", label: "Description", widget: "text", required: false }
+  #     - { name: "Social", label: "Social Links", widget: "list", fields: [
+  #         { name: "name", label: "Name", widget: "string", required: false },
+  #         { name: "icon", label: "Icon", widget: "string", required: false },
+  #         { name: "link", label: "Link", widget: "string", required: false }
+  #       ] }
+  #     - { name: "Draft", label: "Draft", widget: "boolean", required: false }
 
   - name: "people"
     label: "People"
