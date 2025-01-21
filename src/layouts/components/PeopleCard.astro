@@ -22,11 +22,11 @@ const { title, image, social, designation, qualification } = data.data;
       />
     )
   }
-  <h4 class="mb-3">
+  <h4 class="mb-2">
     {title}
     <!-- <a href={`/authors/${data.slug}`}>{title}</a> -->
   </h4>
-  <p class="mb font-bold text-base">{designation}</p>
+  <p class="mb-1 font-bold text-base">{designation}</p>
   <p class="mb-4 ">{qualification}</p>
   <p class="mb-4">
     {plainify(data.body?.slice(0, 250))}

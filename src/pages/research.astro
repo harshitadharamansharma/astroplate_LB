@@ -1,3 +1,128 @@
+<!-- ---
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntry } from "astro:content";
+
+const COLLECTION_FOLDER = "research";
+
+const researchIndex = await getEntry(COLLECTION_FOLDER, "-index");
+const research = await getSinglePage(COLLECTION_FOLDER);
+
+import type { Props } from "astro";
+import ResearchCards from "../components/Research/ResearchCards.astro";
+const AllResearch = await Astro.glob('../content/domainsc/*.md');
+
+const card_list = [
+  {
+    id: 1,
+    img: "./public/rf2.jpg",
+    icon: "./public/heart-pulse-solid.svg",
+    path: "/healthcare",
+    title: "AI in Healthcare",
+  },
+  {
+    id: 2,
+    img: "./public/rf3.jpg",
+    icon: "./public/street-view-solid.svg",
+    path: "/human-centered-systems",
+    title: "Human Centered Systems",
+  },
+  {
+    id: 3,
+    img: "./public/rf4.jpg",
+    icon: "./public/shield-solid.svg",
+    path: "/cybersecurity",
+
+    title: "Cybersecurity",
+  },
+  {
+    id: 4,
+    img: "./public/rf5.jpg",
+    icon: "./public/rf6.png",
+    path: "/wearables",
+
+    title: "Wearables",
+  },
+  {
+    id: 5,
+    img: "./public/rf5.jpg",
+    icon: "./public/rf6.png",
+    path: "/new-domain-1",
+    title: "New Domain",
+  },
+  {
+    id: 6,
+    img: "./public/rf5.jpg",
+    icon: "./public/rf6.png",
+    path: "/new-domain-2",
+    title: "New Domain",
+  },
+];
+---
+
+<Layout
+	title="Research Focus"
+	description="Lorem ipsum dolor sit amet"
+	pubDate={new Date("August 08 2021")}
+	heroImage="/blog-placeholder-about.jpg">  
+
+	// <TitleHeader title="Apply To CPS Lab" bgImg={ TtlBgImg } />
+
+	<TitleHeader title="Research Focus" />
+
+	<div >
+
+  
+		<div class="flex-container">
+		  {card_list.map((item) => {
+			return (
+			  <a href={item.path}>
+				<ResearchCards {...item} key={item.id} />
+			  </a>
+			);
+		  })}
+		</div>
+	  </div>
+	
+
+</Layout>
+
+
+
+
+<style>
+	/* .rf {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  padding-top: 100px;
+} */
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  /* position: relative; */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  max-width: 80rem;
+  /* margin: 0 auto; */
+  color: #752a65;
+  margin: 0 auto; /* to center it horizontally*/
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  gap: 3rem;
+}
+
+.fa {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+</style>
+ _____________________________________________
 ---
 import PeopleCard from "@/components/PeopleCard.astro";
 import Base from "@/layouts/Base.astro";
@@ -67,7 +192,7 @@ const employee = people.filter(people => people.data.category === "Employee")
       </div>
 
 
-      <!-- <div class="row justify-center">
+      // <div class="row justify-center">
         <h1 class="text-blue-500">Supporting Members</h1>
         <hr class="p-4">
 
@@ -79,7 +204,7 @@ const employee = people.filter(people => people.data.category === "Employee")
             </div>
           ))
         }
-      </div> -->
+      </div> //
 
 
       <div class="row justify-center">
@@ -103,3 +228,8 @@ const employee = people.filter(people => people.data.category === "Employee")
 
   </section>
 </Base>
+
+
+
+
+-->

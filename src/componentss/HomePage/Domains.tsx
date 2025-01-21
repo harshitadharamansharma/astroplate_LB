@@ -12,7 +12,7 @@ const Domains = () => {
         While they offer numerous benefits to society on one hand, the current state of cyberization is creating an intellectual challenge to envision, design, and research Human-Centered Systems for the future. Since human-centered systems integrate CPS with various social units – organizations, communities, and distinctive social processes and practices; our lab envisions meeting the research challenges of making them more usable and sustainable.
       `,
       // image: './humancenteredsytem.svg',
-      image: 'public/images/human-computer-interaction.png',
+      image: '/images/human-computer-interaction.png',
       href: '#'
     },
     {
@@ -21,7 +21,7 @@ const Domains = () => {
         The demand for remote healthcare is getting more crucial than ever even as CPSs are making spectacular advancements in this sector. It is piloting technologies and software to address challenging healthcare issues and revolutionizing how myriad healthcare issues are tackled. The CPS healthcare ecosystem has evolved in telemedicine, connected-health, mobile-health and intelligent health in the last two decades. Healthcare-Cyber Physical Systems (H-CPS) networks are available anywhere, anytime and to anyone with the means to digital access. Yet, they are to be rigorously explored and are a matter of high research interest.
       `,
       // image: './healthcare3.svg',
-      image: 'public/images/heart.png',
+      image: 'images/heart.png',
       href: '#'
     },
     {
@@ -30,7 +30,7 @@ const Domains = () => {
         CPSs are closely integrated physical processes for networking, computation, feedback loops and comprise several tiny devices with sensing, computing and wireless communication capabilities. These enhanced functionality, automation, and connectivity also bring significant cybersecurity challenges to the CPS. Moreover, extensive connectivity makes CPS vulnerable to cyber threats and attacks, making safety, security and privacy essential research issues.
       `,
       // image: './cybersecurity.svg',
-      image: 'public/images/cyber-security.png',
+      image: 'images/cyber-security.png',
 
       href: '#'
     },
@@ -42,7 +42,7 @@ const Domains = () => {
         Wearable devices are complex systems of sensors and cross-domain communication networks handling large amounts of data with real-time decision-making capabilities. In addition, they provide continuous autonomous service over a long period. Therefore, rigorous research in computing and design technologies is required to adequately overcome these challenges to satisfy the stringent demands of wearable devices.
       `,
       // image: './wearables.svg',
-      image: 'public/images/wearable-technology.png',
+      image: 'images/wearable-technology.png',
       href: '#'
     },
     {
@@ -52,7 +52,7 @@ const Domains = () => {
         (Detailed description goes here)
       `,
       // image: 'https://epicpadprinting.com/public/img/indus/MEDICAL.png',
-      image: 'public/images/eGov.png',
+      image: 'images/eGov.png',
       href: '#'
     },
     {
@@ -62,7 +62,7 @@ const Domains = () => {
         (Detailed description goes here)
       `,
       // image: 'https://epicpadprinting.com/public/img/indus/MEDICAL.png',
-      image: 'public/images/natural-language-processing.png',
+      image: 'images/natural-language-processing.png',
       href: '#'
     }
   ];
