@@ -68,10 +68,10 @@ collections:
       - { name: "Meta Title", label: "Meta Title", widget: "string", required: false }
       - { name: "Email", label: "Email", widget: "string", required: false }
       - { name: "Image", label: "Image", widget: "image" }
-      - { name: "Designation", label: "Designation", widget: "select", required: true }
+      - { name: "Designation", label: "Designation", required: true }
       - { name: "Qualification", label: "Qualification", widget: "string", required: true }
       - { name: "Description", label: "Description", widget: "text", required: false }
-      - { name: "Category", label: "Category", widget: "string" , options: ["Faculty Members", "Associated Faculty", "Research Scholars", "Supporting Member", "Research Interns"], required: true }
+      - { name: "Category", label: "Category", widget: "select" , options: ["Faculty Members", "Associated Faculty", "Research Scholars", "Supporting Member", "Research Interns"], required: true }
       - { name: "Section", label: "Section", widget: "string", required: false }
       - { name: "Webstie", label: "Webstie", widget: "string", required: false }
       - { name: "Social", label: "Social Links", widget: "list", max: 5, fields: [
