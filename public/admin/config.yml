@@ -104,7 +104,7 @@ collections:
     label: "Blog" # Used in the UI
     folder: "src/content/blog" # The path to the folder where the documents are stored
     # create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template
+    # slug: "{{slug}}" # Filename template
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
@@ -121,7 +121,7 @@ collections:
     label: "News List"
     folder: "src/content/newslist"
     # create: true
-    slug: "{{slug}}"
+    # slug: "{{slug}}"
     fields:
       - { name: "Title", label: "Title", widget: "string" }
       - { name: "Meta Title", label: "Meta Title", widget: "string", required: false }
@@ -135,7 +135,7 @@ collections:
     label: "Authors"
     folder: "src/content/authors"
     # create: true
-    slug: "{{slug}}"
+    # slug: "{{slug}}"
     fields:
       - { name: "Title", label: "Title", widget: "string" }
       - { name: "Meta Title", label: "Meta Title", widget: "string", required: false }
@@ -153,7 +153,7 @@ collections:
     label: "People"
     folder: "src/content/people"
     # create: true
-    slug: "{{slug}}"
+    # slug: "{{slug}}"
     fields:
       - { name: "Title", label: "Title", widget: "string" }
       - { name: "Meta Title", label: "Meta Title", widget: "string", required: false }
