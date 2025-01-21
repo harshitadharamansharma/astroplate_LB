@@ -2,7 +2,7 @@
 title: 'Sunil Kumar'
 email: johndoe@email.com
 image: '/images/people-img/sunil-kumar.jpg'
-
+# draft: false
 designation: 'Assistant Professor'
 qualification: 'Ph.D. University of Delhi'
 description: 'This is the description of the person'
