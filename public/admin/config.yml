@@ -165,9 +165,9 @@ collections:
       - { name: "Category", label: "Category", widget: "string" , options: ["Faculty Members", "Associated Faculty", "Research Scholars", "Supporting Member", "Research Interns"], required: true }
       - { name: "Section", label: "Section", widget: "string", required: false }
       - { name: "Webstie", label: "Webstie", widget: "string", required: false }
-      - { name: "Social", label: "Social Links", widget: "list", fields: [
-          { name: "name", label: "Social Platform", widget: "select", options: ["github", "twitter", "linkedin", "medium", "GoogleScholar"], required: false },
-          { name: "icon", label: "Icon", widget: "select", options: ["FaGithub", "FaTwitter", "FaLinkedin", "FaMedium", "FaGoogleScholar"], required: false },
+      - { name: "Social", label: "Social Links", widget: "list", max: 5, fields: [
+          { name: "name", label: "Social Platform", widget: "select", options: ["github", "twitter", "linkedin", "medium", "GoogleScholar"], required: true },
+          { name: "icon", label: "Icon", widget: "select", options: ["FaGithub", "FaTwitter", "FaLinkedin", "FaMedium", "FaGoogleScholar"], required: true },
           { name: "link", label: "Link", widget: "string", required: true }
         ] }
       - { name: "Draft", label: "Draft", widget: "boolean", required: false }
