@@ -12,8 +12,8 @@ collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "src/content/blog" # The path to the folder where the documents are stored
-    # create: true # Allow users to create new documents in this collection
-    # slug: "{{slug}}" # Filename template
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
@@ -29,8 +29,8 @@ collections:
   - name: "newslist"
     label: "News List"
     folder: "src/content/newslist"
-    # create: true
-    # slug: "{{slug}}"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { name: "Title", label: "Title", widget: "string" }
       - { name: "Meta Title", label: "Meta Title", widget: "string", required: false }
@@ -61,8 +61,8 @@ collections:
   - name: "people"
     label: "People"
     folder: "src/content/people"
-    # create: true
-    # slug: "{{slug}}"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { name: "Title", label: "Title", widget: "string" }
       - { name: "Meta Title", label: "Meta Title", widget: "string", required: false }
@@ -80,6 +80,7 @@ collections:
           { name: "link", label: "Link", widget: "string", required: true }
         ] }
       - { name: "Draft", label: "Draft", widget: "boolean", required: false }
+      # - { name: "Body", label: "About", widget: "markdown", required: false }
 
   # - name: "pages"
   #   label: "Pages"
