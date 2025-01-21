@@ -8,6 +8,7 @@ qualification: 'Ph.D. University of Delhi'
 description: 'This is the description of the person'
 category: 'Associated Faculty'
 section:  ''
+website: 'google.com'
 social:
   - name: github
     icon: FaGithub
@@ -28,6 +29,8 @@ social:
   - name: GoogleScholar
     icon: FaGoogleScholar
     link: https://linkedin.com
+
+
 
   # - name: OrcID
   #   icon: FaOrcID

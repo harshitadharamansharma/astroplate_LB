@@ -65,6 +65,7 @@ const peopleCollection = defineCollection({
     description: z.string().optional(),
     category: z.string(),
     section: z.string().optional(),
+    website: z.string().optional(),
 
     social: z
       .array(
