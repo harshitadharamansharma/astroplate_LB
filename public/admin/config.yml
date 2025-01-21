@@ -62,8 +62,9 @@ collections:
     label: "People"
     folder: "src/content/people"
     create: true
-    slug: "{{slug | lower}}-{{date | date('YYYY-MM-DD')}}"
-
+    # slug: "{{slug | lower}}-{{date | date('YYYY-MM-DD')}}"
+    slug: "{{slug}}"
+    # identifier_field: "slug"
     fields:
       - { name: "title", label: "Title", widget: "string" }
       # - { name: "meta title", label: "Meta Title", widget: "string", required: false }
