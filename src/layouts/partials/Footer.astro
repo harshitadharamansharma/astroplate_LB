@@ -1,6 +1,7 @@
 ---
 // import Logo from "@/components/Logo.astro";
 import CPSLogoWhite from "public/images/logo-darkmode.png";
+import CPSLogo from "public/images/logo.png";
 
 import Social from "@/components/Social.astro";
 import config from "@/config/config.json";
@@ -44,7 +45,7 @@ const urlSocials2= [
 
 ---
 
-<footer class="bg-darkmode-theme-light dark:bg-darkmode-theme-light w-full flex items-stretch flex-col justify-center ">
+<footer class=" bg-theme-light dark:bg-darkmode-theme-light w-full flex items-stretch flex-col justify-center ">
 
 <!--   <footer class="bg-theme-light dark:bg-darkmode-theme-light">
  
@@ -78,13 +79,13 @@ const urlSocials2= [
 		items-stretch md:px-[8%] ">
 
 		<FooterColumns 
-			image = { CPSLogoWhite.src }
+			image = { CPSLogo.src }
 			imageAltText = "CyPSi - Logo - white"
 			description = `<div class="text-sm">Institute of Informatics &amp; Communication<br>
 							University of Delhi
 							South Campus<br>
 							Delhi – 110021<br><br>
-							<a class="text-sm my-4 text-[#ffffff]" href="mailto:cps@south.du.ac.in">cps@south.du.ac.in</a> </div>`, 
+							<a class="text-sm my-4 text-darkmode-theme" href="mailto:cps@south.du.ac.in">cps@south.du.ac.in</a> </div>`, 
 		/>
 
 		<FooterColumns 
